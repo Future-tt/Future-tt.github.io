@@ -4,13 +4,50 @@
   
     
     <entry>
+      <title>JSP入门</title>
+      <link href="/2020/09/30/JSP%E5%85%A5%E9%97%A8/"/>
+      <url>/2020/09/30/JSP%E5%85%A5%E9%97%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="JSP入门"><a href="#JSP入门" class="headerlink" title="JSP入门"></a>JSP入门</h1><p><code>Java Server Pages：</code> java服务器端页面</p><ul><li>可以理解为：一个特殊的页面，其中既可以指定定义html标签，又可以定义java代码</li><li>用于简化书写</li></ul><p><strong>原理：</strong></p><p>JSP本质上就是一个Servlet</p><p><strong>JSP的脚本：</strong>JSP定义Java代码的方式</p><ol><li>&lt;%  代码 %&gt;：定义的java代码，在service方法中。service方法中可以定义什么，该脚本中就可以定义什么。</li><li>&lt;%! 代码 %&gt;：定义的java代码，在jsp转换后的java类的成员位置。定义成员方法，成员变量。</li><li>&lt;%= 代码 %&gt;：定义的java代码，会输出到页面上。输出语句中可以定义什么，该脚本中就可以定义什么。</li></ol><p><strong>JSP的内置对象：</strong>在jsp页面中不需要获取和创建，可以直接使用的对象</p><p>jsp一共有9个内置对象。</p><p>今天学习3个：</p><ul><li>request</li><li>response</li><li>out：字符输出流对象。可以将数据输出到页面上。和response.getWriter()类似<ul><li>response.getWriter()和out.write()的区别：<ul><li>在tomcat服务器真正给客户端做出响应之前，会先找response缓冲区数据，再找out缓冲区数据。</li><li>response.getWriter()数据输出永远在out.write()之前</li></ul></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Web入门 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Jsp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>开始既是结束</title>
       <link href="/2020/09/29/%E5%BC%80%E5%A7%8B%E6%97%A2%E6%98%AF%E7%BB%93%E6%9D%9F/"/>
       <url>/2020/09/29/%E5%BC%80%E5%A7%8B%E6%97%A2%E6%98%AF%E7%BB%93%E6%9D%9F/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>​        今年开学就是大三了，这次开学，也就是结束。</p>]]></content>
       
       
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -326,9 +363,9 @@
       
         <tags>
             
-            <tag> 恋爱 </tag>
-            
             <tag> 生活 </tag>
+            
+            <tag> 恋爱 </tag>
             
         </tags>
       
@@ -459,9 +496,9 @@
       
         <tags>
             
-            <tag> 恋爱 </tag>
-            
             <tag> 生活 </tag>
+            
+            <tag> 恋爱 </tag>
             
         </tags>
       
