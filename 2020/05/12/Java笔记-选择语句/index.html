@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Java笔记-选择语句 | Future-tt</title><meta name="keywords" content="Java笔记"><meta name="author" content="Future-T"><meta name="copyright" content="Future-T"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="选择语句If语句if 语句是使用最多的条件分支结构，它属于选择语句，也可以称为条件语句。 if 选择结构是根据条件判断之后再做处理的一种语法结构。默认情况下，if 语句控制着下方紧跟的一条语句的执行。不过，通过语句块，if 语句可以控制多个语句。 123if (条件表达式) &amp;#123;    语句块;&amp;#125;   条件表达式&#96;：条件表达式可以是任意一种逻辑表达式，最后返回的结果必须是一个布尔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java笔记-选择语句">
+<meta property="og:url" content="http://yoursite.com/2020/05/12/Java%E7%AC%94%E8%AE%B0-%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/index.html">
+<meta property="og:site_name" content="Future-tt">
+<meta property="og:description" content="选择语句If语句if 语句是使用最多的条件分支结构，它属于选择语句，也可以称为条件语句。 if 选择结构是根据条件判断之后再做处理的一种语法结构。默认情况下，if 语句控制着下方紧跟的一条语句的执行。不过，通过语句块，if 语句可以控制多个语句。 123if (条件表达式) &amp;#123;    语句块;&amp;#125;   条件表达式&#96;：条件表达式可以是任意一种逻辑表达式，最后返回的结果必须是一个布尔">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2020-05-12T07:37:33.000Z">
+<meta property="article:modified_time" content="2020-05-13T07:47:55.997Z">
+<meta property="article:author" content="Future-T">
+<meta property="article:tag" content="Java笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/2020/05/12/Java%E7%AC%94%E8%AE%B0-%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java笔记-选择语句',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-05-13 15:47:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Future-tt</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java笔记-选择语句</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-05-12T07:37:33.000Z" title="发表于 2020-05-12 15:37:33">2020-05-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-05-13T07:47:55.997Z" title="更新于 2020-05-13 15:47:55">2020-05-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Java学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java笔记-选择语句"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="选择语句"><a href="#选择语句" class="headerlink" title="选择语句"></a>选择语句</h3><h4 id="If语句"><a href="#If语句" class="headerlink" title="If语句"></a>If语句</h4><p>if 语句是使用最多的条件分支结构，它属于选择语句，也可以称为条件语句。</p>
+<p>if 选择结构是根据条件判断之后再做处理的一种语法结构。默认情况下，if 语句控制着下方紧跟的一条语句的执行。不过，通过语句块，if 语句可以控制多个语句。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (条件表达式) &#123;</span><br><span class="line">    语句块;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>条件表达式`：条件表达式可以是任意一种逻辑表达式，最后返回的结果必须是一个布尔值。取值可以是一个单纯的布尔变量或常量，也可以是使用关系或布尔运算符的表达式。如果条件为真，那么执行语句块；如果条件为假，则语句块将被绕过而不被执行。</p>
+</li>
+<li><p>语句块`：该语句块可以是一条语句也可以是多条语句。如果仅有一条语句，可省略条件语句中的大括号 {}。当从编程规范角度不要省略大括号，省略大括号会使程序的可读性变差。</p>
+</li>
+</ul>
+<h4 id="if-else-结构"><a href="#if-else-结构" class="headerlink" title="if-else 结构"></a>if-else 结构</h4><p>单 if 语句仅能在满足条件时使用，而无法执行任何其他操作（停止）。而结合 else 语句的 if 可以定义两个操作，此时的 if…else 语句表示“如果条件正确则执行一个操作，否则执行另一个操作”。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (表达式) &#123;</span><br><span class="line">    语句块<span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    语句块<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="多条件-if-else-if-语句"><a href="#多条件-if-else-if-语句" class="headerlink" title="多条件 if-else-if 语句"></a>多条件 if-else-if 语句</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>) &#123;</span><br><span class="line">    语句块<span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">2</span>) &#123;</span><br><span class="line">    语句块<span class="number">2</span>;</span><br><span class="line">...</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(表达式n) &#123;</span><br><span class="line">    语句块n;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    语句块n+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="if嵌套"><a href="#if嵌套" class="headerlink" title="if嵌套"></a>if嵌套</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(表达式<span class="number">2</span>) &#123;</span><br><span class="line">        语句块<span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        语句块<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(表达式<span class="number">3</span>) &#123;</span><br><span class="line">        语句块<span class="number">3</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">4</span>) &#123;</span><br><span class="line">        语句块<span class="number">4</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(表达式n) &#123;</span><br><span class="line">            语句块n;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            语句块n+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="keyword">switch</span> 语句</span><br></pre></td></tr></table></figure>
+
+<h4 id="switch-语句"><a href="#switch-语句" class="headerlink" title="switch 语句"></a>switch 语句</h4><p>switch 语句是 <a target="_blank" rel="noopener" href="http://c.biancheng.net/java/">Java</a> 的多路分支语句。它提供了一种基于一个表达式的值来使程序执行不同部分的简单方法。因此，它提供了一个比一系列 if-else-if 语句更好的选择。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式) &#123;</span><br><span class="line">    <span class="keyword">case</span> 值<span class="number">1</span>:</span><br><span class="line">        语句块<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> 值<span class="number">2</span>:</span><br><span class="line">        语句块<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    …</span><br><span class="line">    <span class="keyword">case</span> 值n:</span><br><span class="line">        语句块n;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        语句块n+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>1）switch</p>
+<p>表示“开关”，这个开关就是 switch 关键字后面小括号里的值，小括号里要放一个整型变量或字符型变量。表达式必须为 byte，short，int，char类型。</p>
+<p>2）case</p>
+<p>表示“情况，情形”，case 标签可以是：</p>
+<ul>
+<li>类型为 char、byte、 short 或 int 的常量表达式。</li>
+<li>枚举常量。</li>
+<li>从 Java SE 7 开始， case 标签还可以是字符串字面量。</li>
+</ul>
+<p>3）default</p>
+<p>表示“默认”，即其他情况都不满足。default 后要紧跟冒号，default 块和 case 块的先后顺序可以变动，不会影响程序执行结果。通常，default 块放在末尾，也可以省略不写。</p>
+<p>4）break</p>
+<p>表示“停止”，即跳出当前结构。</p>
+<h4 id="if-语句和-switch-语句的区别"><a href="#if-语句和-switch-语句的区别" class="headerlink" title="if 语句和 switch 语句的区别"></a>if 语句和 switch 语句的区别</h4><p>if 和 switch 语句都表示条件语句，可以从使用效率和实用性两方面加以区分。</p>
+<ol>
+<li>从使用效率上区分</li>
+</ol>
+<p>从使用效率上区分，在对同一个变量的不同值作条件判断时，既可以使用 switch 语句，也可以使用 if 语句。使用 switch 语句的效率更高一些，尤其是判断的分支越多，越明显。</p>
+<ol start="2">
+<li>从实用性上区分</li>
+</ol>
+<p>从语句的实用性角度区分，switch 语句不如 if 条件语句，if 语句是应用最广泛和最实用的语句。</p>
+<ol start="3">
+<li>何时使用 if 语句和 switch 语句</li>
+</ol>
+<p>在程序开发的过程中，何时使用 if 语句和 switch 语句，需要根据实际情况而定，应尽量做到物尽其用。不能因为 switch 语句的效率高就一直使用，也不能因为 if 语句常用就不用 switch 语句。需要根据实际情况，具体问题具体分析，使用最适合的条件语句。</p>
+<p>一般情况下，对于判断条件较少的，可以使用 if 条件语句，但是在实现一些多条件的判断中，最好使用 switch 语句。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Future-T</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/05/12/Java%E7%AC%94%E8%AE%B0-%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/">http://yoursite.com/2020/05/12/Java%E7%AC%94%E8%AE%B0-%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com" target="_blank">Future-tt</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java%E7%AC%94%E8%AE%B0/">Java笔记</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/05/12/Java%E7%AC%94%E8%AE%B0-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Java笔记-循环语句</div></div></a></div><div class="next-post pull-right"><a href="/2020/05/12/Java%E7%AC%94%E8%AE%B0-%E8%BF%90%E7%AE%97%E7%AC%A6/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Java笔记-运算符</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/07/24/Java笔记-File类/" title="Java笔记-File类"><img class="cover" src="https://s1.ax1x.com/2020/07/24/UXc458.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-24</div><div class="title">Java笔记-File类</div></div></a></div><div><a href="/2020/07/26/Java笔记-Junit测试类/" title="Java笔记-Junit测试类"><img class="cover" src="https://s1.ax1x.com/2020/07/26/aC6I4s.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-26</div><div class="title">Java笔记-Junit测试类</div></div></a></div><div><a href="/2020/05/12/Java笔记-数据类型/" title="Java笔记-数据类型"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-12</div><div class="title">Java笔记-数据类型</div></div></a></div><div><a href="/2020/05/24/Java笔记-简单的TCP通信程序（一）/" title="Java笔记-简单的TCP通信程序（一）"><img class="cover" src="https://cdn.jsdelivr.net/gh/Future-tt/images/img/tcp.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-24</div><div class="title">Java笔记-简单的TCP通信程序（一）</div></div></a></div><div><a href="/2020/05/27/Java笔记-简单的TCP通信程序（二）/" title="Java笔记-简单的TCP通信程序（二）"><img class="cover" src="https://cdn.jsdelivr.net/gh/Future-tt/images/img/tcp.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-27</div><div class="title">Java笔记-简单的TCP通信程序（二）</div></div></a></div><div><a href="/2020/05/18/Java笔记-类/" title="Java笔记-类"><img class="cover" src="https://s1.ax1x.com/2020/05/18/Yh9Njg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-18</div><div class="title">Java笔记-类</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Future-T</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.</span> <span class="toc-text">选择语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#If%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.</span> <span class="toc-text">If语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#if-else-%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">if-else 结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%9D%A1%E4%BB%B6-if-else-if-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.</span> <span class="toc-text">多条件 if-else-if 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#if%E5%B5%8C%E5%A5%97"><span class="toc-number">1.4.</span> <span class="toc-text">if嵌套</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#switch-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.5.</span> <span class="toc-text">switch 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#if-%E8%AF%AD%E5%8F%A5%E5%92%8C-switch-%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.6.</span> <span class="toc-text">if 语句和 switch 语句的区别</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/04/28/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%AE%B0/" title="生活小记"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生活小记"/></a><div class="content"><a class="title" href="/2021/04/28/%E7%94%9F%E6%B4%BB%E5%B0%8F%E8%AE%B0/" title="生活小记">生活小记</a><time datetime="2021-04-28T09:56:05.000Z" title="发表于 2021-04-28 17:56:05">2021-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/10/04/hdshfhhsdn/" title="hdshfhhsdn"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hdshfhhsdn"/></a><div class="content"><a class="title" href="/2020/10/04/hdshfhhsdn/" title="hdshfhhsdn">hdshfhhsdn</a><time datetime="2020-10-03T16:39:45.000Z" title="发表于 2020-10-04 00:39:45">2020-10-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/30/JSP%E5%85%A5%E9%97%A8/" title="JSP入门"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JSP入门"/></a><div class="content"><a class="title" href="/2020/09/30/JSP%E5%85%A5%E9%97%A8/" title="JSP入门">JSP入门</a><time datetime="2020-09-30T13:45:17.000Z" title="发表于 2020-09-30 21:45:17">2020-09-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/29/%E5%BC%80%E5%A7%8B%E6%97%A2%E6%98%AF%E7%BB%93%E6%9D%9F/" title="开始既是结束"><img src="https://s1.ax1x.com/2020/09/30/0uwEY8.md.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开始既是结束"/></a><div class="content"><a class="title" href="/2020/09/29/%E5%BC%80%E5%A7%8B%E6%97%A2%E6%98%AF%E7%BB%93%E6%9D%9F/" title="开始既是结束">开始既是结束</a><time datetime="2020-09-29T10:55:50.000Z" title="发表于 2020-09-29 18:55:50">2020-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/06/%E5%BC%80%E5%AD%A6%E4%BA%86%EF%BC%81/" title="开学了！"><img src="https://s1.ax1x.com/2020/05/20/Yoa6Qs.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开学了！"/></a><div class="content"><a class="title" href="/2020/09/06/%E5%BC%80%E5%AD%A6%E4%BA%86%EF%BC%81/" title="开学了！">开学了！</a><time datetime="2020-09-06T11:05:52.000Z" title="发表于 2020-09-06 19:05:52">2020-09-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Future-T</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
